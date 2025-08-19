@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     @posts = Post.order(id: "DESC")
   end
 
-  def create
+    def create
     post = Post.create(content: params[:content])
     render json:{ post: post }
   end
